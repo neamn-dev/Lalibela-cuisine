@@ -331,37 +331,42 @@ function App() {
 
         {/* ── QUICK ACTIONS ── */}
         <section className="quick-actions">
-          <div className="container quick-grid">
-            <a href={RESERVATION} target="_blank" rel="noreferrer">
-              <span className="action-icon">
-                <Icon name="calendar" />
-              </span>
-              <span>
-                <b>Reserve a Table</b>
-                <small>Plan your visit</small>
-              </span>
-              <Icon name="arrow" />
-            </a>
-            <a href={ORDER} target="_blank" rel="noreferrer">
-              <span className="action-icon">
-                <Icon name="order" />
-              </span>
-              <span>
-                <b>Order Online</b>
-                <small>Enjoy at home</small>
-              </span>
-              <Icon name="arrow" />
-            </a>
-            <a href={PHONE_LINK}>
-              <span className="action-icon">
-                <Icon name="phone" />
-              </span>
-              <span>
-                <b>Call Us</b>
-                <small>{PHONE}</small>
-              </span>
-              <Icon name="arrow" />
-            </a>
+          <div className="container">
+            <div className="quick-grid">
+              <a href={RESERVATION} target="_blank" rel="noreferrer" className="quick-card">
+                <span className="quick-card__number">01</span>
+                <span className="quick-card__icon">
+                  <Icon name="calendar" />
+                </span>
+                <h3 className="quick-card__title">Reserve a Table</h3>
+                <p className="quick-card__desc">Book your dining experience and join us for an authentic Ethiopian meal.</p>
+                <span className="quick-card__cta">
+                  Book Now <Icon name="arrow" />
+                </span>
+              </a>
+              <a href={ORDER} target="_blank" rel="noreferrer" className="quick-card">
+                <span className="quick-card__number">02</span>
+                <span className="quick-card__icon">
+                  <Icon name="order" />
+                </span>
+                <h3 className="quick-card__title">Order Online</h3>
+                <p className="quick-card__desc">Enjoy our traditional dishes from the comfort of your home, delivered fresh.</p>
+                <span className="quick-card__cta">
+                  Start Order <Icon name="arrow" />
+                </span>
+              </a>
+              <a href={PHONE_LINK} className="quick-card">
+                <span className="quick-card__number">03</span>
+                <span className="quick-card__icon">
+                  <Icon name="phone" />
+                </span>
+                <h3 className="quick-card__title">Call Us</h3>
+                <p className="quick-card__desc">Have questions or need help? Reach us directly at {PHONE}.</p>
+                <span className="quick-card__cta">
+                  Call Now <Icon name="arrow" />
+                </span>
+              </a>
+            </div>
           </div>
         </section>
 
